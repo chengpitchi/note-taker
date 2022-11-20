@@ -111,6 +111,7 @@ const handleNewNoteView = (e) => {
 };
 
 const handleRenderSaveBtn = () => {
+  // add a condition to evaluate the display of save button only if the title file is not read only
   if (!noteTitle.getAttribute("readonly")) {
     if (!noteTitle.value.trim() || !noteText.value.trim()) {
       hide(saveNoteBtn);
